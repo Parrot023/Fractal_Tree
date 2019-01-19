@@ -30,7 +30,8 @@ function draw() {
   branch(150);
 
   //sets angle to the value given by the slider
-  angle = slider.value();
+  // angle = slider.value();
+  angle ++;
 }
 
 //recursion

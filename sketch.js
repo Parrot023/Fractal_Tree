@@ -5,6 +5,7 @@
 //https://youtu.be/0jjeOYMjmDU
 
 var slider;
+var checkbox;
 var angle = 0;
 
 function setup() {
@@ -13,6 +14,8 @@ function setup() {
   background(0);
   //HTML slider
   slider = createSlider(0, TWO_PI, PI / 4, 0.01);
+
+
   // put setup code here
 }
 
@@ -30,7 +33,12 @@ function draw() {
   branch(150);
 
   //sets angle to the value given by the slider
-  angle = slider.value();
+  if (document.getElementById('checkbox').checked) {
+    angle = slider.value();
+  } else {
+    angle += 0.02;
+  }
+
 }
 
 //recursion
